@@ -1,0 +1,85 @@
+<!--pages/acupoint/acupoint.wxml-->
+<view class="ac_container">
+  <!-- <view class="top_search">
+    <form catchsubmit="searchAc">
+      <view class="ac_search">
+        <view class="ac_input">
+          <input name="input"  auto-focus type="text" placeholder="输入要搜索的穴位" />
+        </view>
+        <view class="ac_btn">
+          <button type="primary" size="mini" plain="true" form-type="submit">搜索</button>
+        </view>
+      </view>
+    </form>
+  </view> -->
+  <view class="ac_content">
+    <scroll-view  class="left_side" scroll-y="true" enable-flex="true">
+      <!-- 列表渲染 5.27 -->
+      <view class="me_item" wx:for="{{me}}" wx:for-item="meridian" wx:key="id"> 
+        <!-- 经脉列表及点击事件 -->
+        <view class="me_name" bindtap="chooseMe" data-index="{{meridian.id}}">
+          <view>{{meridian.name}}</view>
+          <!-- <text>{{meridian.num}}</text> -->
+        </view>
+        <view class="list_item" hidden="{{list_open ? false : true}}">
+          <block wx:for="{{ac}}" wx:key="acupoint" wx:for-item="acupoint">
+              <view class="me_ac" wx:if="{{acupoint.fid==meridian.id}}">
+                <view class="ac_name" bindtap="chooseAc" data-index="{{acupoint.id}}" data-father="{{meridian.id}}">
+                {{acupoint.acuname}}
+                </view>
+              </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="center_content" scroll-y="true" enable-flex="true">
+      <view class="ac_detail" wx:if="{{ac_open==true}}">
+        <view class="ac_acu ac_item">
+          <text>{{ac_detail.acuname}}穴</text>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.position}}">
+          <view class="ac_position">
+            <text class="item_label">穴位位置：</text><text>{{ac_detail.position}}</text>
+          </view>
+        </view>
+        <!-- 如果穴位位置为空则说明其他字段皆空 -->
+        <view class="ac_item" wx:elif="{{ac_detail.position==''}}">
+          <text class="wait_up">穴位正在更新，敬请期待！</text>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.dissection!=''}}">
+          <view class="ac_dissection">
+            <text class="item_label">穴位解剖：</text><text>{{ac_detail.dissection}}</text>
+          </view>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.operation!=''}}">
+          <view class="ac_operation">
+            <text class="item_label">穴位操作：</text><text>{{ac_detail.operation}}</text>
+          </view>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.point!=''}}">
+          <view class="ac_point">
+            <text class="item_label">穴位主治：</text><text>{{ac_detail.point}}</text>
+          </view>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.massage!=''}}">
+          <view class="ac_massage">
+            <text class="item_label">穴位按摩：</text><text>{{ac_detail.massage}}</text>
+          </view>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.acupuncture!=''}}">
+          <view class="ac_acupuncture">
+            <text class="item_label">穴位针灸：</text><text>{{ac_detail.acupuncture}}</text>
+          </view>
+        </view>
+        <view class="ac_item" wx:if="{{ac_detail.moxibustion!=''}}">
+          <view class="ac_moxibustion">
+            <text class="item_label">穴位艾灸：</text><text>{{ac_detail.moxibustion}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="ac_start" wx:else>
+          <image src="cloud://course-design-9g0tep2cf0411ab9.636f-course-design-9g0tep2cf0411ab9-1311984446/cm.png"></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

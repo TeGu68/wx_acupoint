@@ -1,0 +1,42 @@
+{
+  "light": {
+    "navBgColor": "#f6f6f6",
+    "navTxtStyle": "black",
+    "bgColor": "#ffffff",
+    "bgTxtStyle": "light",
+    "bgColorTop": "#eeeeee",
+    "bgColorBottom": "#efefef",
+    "tabFontColor": "#000000",
+    "tabSelectedColor": "#3cc51f",
+    "tabBgColor": "#ffffff",
+    "tabBorderStyle": "black",
+    "iconPath1": "/static/img/icon/s.png",
+    "selectedIconPath1": "/static/img/icon/s.png",
+    "iconPath2": "/static/img/icon/x.png",
+    "selectedIconPath2": "/static/img/icon/x.png",
+    "iconPath3": "/static/img/icon/h.png",
+    "selectedIconPath3": "/static/img/icon/h.png",
+    "iconPath4": "/static/img/icon/c.png",
+    "selectedIconPath4": "/static/img/icon/c.png"
+  },
+  "dark": {
+    "navBgColor": "#191919",
+    "navTxtStyle": "white",
+    "bgColor": "#1f1f1f",
+    "bgTxtStyle": "dark",
+    "bgColorTop": "#191919",
+    "bgColorBottom": "#1f1f1f",
+    "tabFontColor": "#ffffff",
+    "tabSelectedColor": "#51a937",
+    "tabBgColor": "#191919",
+    "tabBorderStyle": "white",
+    "iconPath1": "/static/img/icon/s.png",
+    "selectedIconPath1": "/static/img/icon/s.png",
+    "iconPath2": "/static/img/icon/x.png",
+    "selectedIconPath2": "/static/img/icon/x.png",
+    "iconPath3": "/static/img/icon/h.png",
+    "selectedIconPath3": "/static/img/icon/h.png",
+    "iconPath4": "/static/img/icon/c.png",
+    "selectedIconPath4": "/static/img/icon/c.png"
+  }
+}

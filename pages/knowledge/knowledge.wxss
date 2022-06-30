@@ -1,0 +1,109 @@
+/* pages/knowledge/knowledge.wxss */
+page{
+  position: relative !important;
+  top: 0px !important;
+}
+/*容器*/
+.pa_content{
+  display: flex;
+  flex-direction: column;
+  background: 	#F8F8F8;
+}
+/*分类卡片*/
+.pa_class{
+  width: 16rem;
+  height: 16rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 5px;
+}
+
+.pa_title{
+  margin: .4rem;
+  flex: 1;
+}
+
+.pa_img{
+  overflow: hidden;
+  flex: 6;
+  border-top: .1rem solid #F8F8F8;
+  border-bottom: .1rem solid #F8F8F8;
+}
+.pa_img image{
+  width: 100%;
+}
+.pa_numb{
+  margin: .4rem;
+  color: gray;
+  flex: 1;
+}
+
+.pa_numb text{
+  margin-right: 1rem;
+}
+
+/*page-container中内容*/
+.screen{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.screen_container{
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.page_item{
+  display: flex;
+  flex-direction: column;
+}
+.page_item view{
+  margin: .4rem 0;
+  font-weight: 500;
+  color: green;
+}
+.page_item view text{
+  color: black;
+}
+.page_name text{
+  color: goldenrod !important;
+  font-size: 1.4rem;
+}
+.page_condition{
+  font-size: 1rem;
+}
+.screen_btn{
+  display: block;
+  margin: 24px auto;
+}
+.page_number{
+  display: flex;
+  flex-direction: row;
+}
+.number_item{
+  margin: .4rem 1rem .4rem 0rem !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.number_item image{
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.number_item text{
+  font-size: 1.2rem;
+  margin-left: .2rem;
+}
+.page_times text{
+  color: darkgrey;
+  font-size: 1rem;
+}

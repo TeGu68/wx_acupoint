@@ -1,0 +1,23 @@
+/* pages/mydata/mydata.wxss */
+scroll-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+view{
+  position: relative;
+  width: 20rem;
+  height: 30rem;
+  margin: auto;
+}
+ec-canvas{
+  width: 100%;
+  height: 100%;
+}
+#mychart-meridian,#mychart-pages{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}

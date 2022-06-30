@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/acupoint/acupoint",
+    "pages/knowledge/knowledge",
+    "pages/mydata/mydata"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTitleText": "穴位按摩",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom",
+    "enablePullDownRefresh": true,
+    "visualEffectInBackground": "hidden",
+    "restartStrategy": "homePageAndLatestPage"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/acupoint/acupoint",
+        "text": "穴位",
+        "iconPath": "@iconPath2",
+        "selectedIconPath": "@selectedIconPath2"
+      },
+      {
+        "pagePath": "pages/knowledge/knowledge",
+        "text": "文章",
+        "iconPath": "@iconPath3",
+        "selectedIconPath": "@selectedIconPath3"
+      },
+      {
+        "pagePath": "pages/mydata/mydata",
+        "text": "数据分析",
+        "iconPath": "@iconPath4",
+        "selectedIconPath": "@selectedIconPath4"
+      }
+    ],
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "darkmode": true,
+  "themeLocation": "theme.json",
+  "resizable": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

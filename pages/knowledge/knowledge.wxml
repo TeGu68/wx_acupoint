@@ -1,0 +1,71 @@
+<!--pages/knowledge/knowledge.wxml-->
+<view>
+  <scroll-view enable-flex="true" class="pa_content">
+    <block wx:for="{{page_class}}" wx:key="pages" wx:for-item="pclass">
+      <view class="pa_class" bindtap="popup" data-index="{{pclass.id}}" data-times="{{pclass.times}}">
+        <view class="pa_title" duration="{{duration}}">
+          <text>{{pclass.class}}</text>
+        </view>
+        <view class="pa_img">
+          <image lazy-load="true" src="cloud://course-design-9g0tep2cf0411ab9.636f-course-design-9g0tep2cf0411ab9-1311984446/pages/{{pclass.cover}}"></image>
+        </view>
+        <view class="pa_numb">
+          <text>文章数：{{pclass.num}}</text>
+          <text>浏览量：{{pclass.times}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<page-container 
+  show="{{show}}"
+  overlay="{{overlay}}"
+  close-on-slide-down
+  duration="{{duration}}"
+  position="{{position}}"
+  bindbeforeenter="onBeforeEnter"
+  bindenter="onEnter"
+  bindafterenter="onAfterEnter"
+  bindbeforeleave="onBeforeLeave"
+  bindleave="onLeave"
+  bindafterleave="onAfterLeave"
+  bindclickoverlay="onClickOverlay">
+  <view class="screen">
+    <view class="screen_container">
+      <block wx:for="{{page_content}}" wx:key="content" wx:for-item="pcontent">
+        <view class="page_item">
+          <view class="page_name">
+            <text>{{pcontent.title}}</text>
+          </view>
+          <view class="page_condition" wx:if="{{pcontent.condition!=''}}">
+            状况描述:<text user-select="true">{{pcontent.condition}}</text>
+          </view>
+          <view class="page_principle" wx:if="{{pcontent.principle!=''}}">
+            原理描述:<text user-select="true">{{pcontent.principle}}</text>
+          </view>
+          <view class="page_method">
+            方法描述:<text user-select="true">{{pcontent.method}}</text>
+          </view>
+          <view class="page_attention" wx:if="{{pcontent.attention!=''}}">
+            注意事项:<text user-select="true">{{pcontent.attention}}</text>
+          </view>
+          <view class="page_number" bindtap="add_like" data-pid="{{pcontent.id}}">
+            <view class="page_likes number_item">
+              <image src="cloud://course-design-9g0tep2cf0411ab9.636f-course-design-9g0tep2cf0411ab9-1311984446/icon/like.png"></image>
+              <text>{{pcontent.times}}</text>
+            </view>
+          </view>
+
+        </view>
+      </block>
+      <view class="page_number">
+        <view class="page_times number_item">
+          <image src="cloud://course-design-9g0tep2cf0411ab9.636f-course-design-9g0tep2cf0411ab9-1311984446/icon/look.png"></image>
+          <text>总浏览量：{{page_times}}</text>
+        </view>
+      </view>
+      <button class="screen_btn" type="primary" bindtap="exit">退出</button>
+    </view>
+  </view>
+</page-container>

@@ -1,0 +1,9 @@
+<!--pages/mydata/mydata.wxml-->
+<scroll-view enable-flex="true">
+  <view>
+    <ec-canvas id="mychart_meridian" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <view>
+    <ec-canvas id="mychart_pages" canvas-id="mychart-pie" ec="{{ ec_pie }}"></ec-canvas>
+  </view>
+</scroll-view>
